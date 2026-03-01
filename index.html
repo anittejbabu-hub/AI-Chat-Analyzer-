@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Chat Analyzer</title>
+</head>
+<body>
+    <h1>🤖 AI Smart Chat Analyzer</h1>
+
+    <form method="POST">
+        <textarea name="message" rows="5" cols="50" placeholder="Enter your message here"></textarea><br><br>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+        <h2>📊 Analysis Report</h2>
+        <p><strong>Sentiment:</strong> {{ result.sentiment }}</p>
+        <p><strong>Emotion:</strong> {{ result.emotion }}</p>
+        <p><strong>Toxic Words:</strong> {{ result.toxic_words }}</p>
+    {% endif %}
+
+</body>
+</html>
